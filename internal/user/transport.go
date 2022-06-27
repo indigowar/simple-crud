@@ -86,7 +86,7 @@ func DecodeGetAllRequest(_ context.Context, r *http.Request) (interface{}, error
 
 func DecodeDeleteRequest(_ context.Context, r *http.Request) (interface{}, error) {
 	vars := mux.Vars(r)
-	strId := vars["customerid"]
+	strId := vars["id"]
 	intId, _ := strconv.Atoi(strId)
 	req := DeleteRequest{
 		ID: int64(intId),
