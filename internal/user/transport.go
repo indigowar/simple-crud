@@ -71,7 +71,7 @@ func DecodeCreateRequest(_ context.Context, r *http.Request) (interface{}, error
 
 func DecodeGetByIDRequest(_ context.Context, r *http.Request) (interface{}, error) {
 	vars := mux.Vars(r)
-	strId := vars["customerid"]
+	strId := vars["id"]
 	intId, _ := strconv.Atoi(strId)
 	req := GetByIDRequest{
 		ID: int64(intId),
